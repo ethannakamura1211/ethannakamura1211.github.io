@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>World Happiness Report</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script type="text/javascript" src="js/countrys_flags.js"></script>
+</head>
+
+<body>		
+  <main>
+    <div class="header"></div>
+      <header>
+        <span class="mainTitle">World Happiness Report</span>
+        <div class="pagination">
+          <ul id="mainMenu">
+            <li><a href="#" class="menu" id="Slide0" onclick="currentSlide('World-View')">World View</a></li>
+            <li><a href="#" class="menu" id="Slide1" onclick="currentSlide('Happiness-Score')">Happiness Score</a></li>
+            <li><a href="#" class="menu" id="Slide2" onclick="currentSlide('GDP')">GDP</a></li>
+            <li><a href="#" class="menu" id="Slide3" onclick="currentSlide('Social-Support')">Social Support</a></li>
+            <li><a href="#" class="menu" id="Slide4" onclick="currentSlide('Healthy-Life-Expectancy')">Healthy Life Expectancy</a></li>
+            <li><a href="#" class="menu" id="Slide5" onclick="currentSlide('Freedom')">Freedom</a></li>
+            <li><a href="#" class="menu" id="Slide6" onclick="currentSlide('Trust')">Trust</a></li>
+            <li><a href="#" class="menu" id="Slide7" onclick="currentSlide('Generosity')">Generosity</a></li>
+            <li><a href="#" class="menu" id="Slide8" onclick="currentSlide('Dystopia')">Dystopia</a></li>
+            <li><a href="#" id="buttonNext" onclick="nextSlide()">NEXT ▶</a></li>
+          </ul>
+        </div>
+      <span id="graphDescriptionText" class="graphOrientations"></span> 
+      </header>
+      <div style="text-align:center; width: 50%; position: relative; left: 25%;top: 10px;">
+        The World Happiness Report provides valuable insights into the happiness and well-being of nations across the globe.
+        The data is published yearly by the<a href="https://worldhappiness.report/"> world happiness report</a>.
+        Visualising the data from this report can help us understand the factors influencing happiness scores and identify trends over time.
+        The top 50 countries for each indicator have been displayed according to their overall happiness score.
+        Hover over the visuals for additional details relating to the Happinness score and metrics of each country.
+        The data was collected from <a href="https://www.kaggle.com/datasets/mathurinache/world-happiness-report?select=2022.csv">kaggle 2015-2022</a> and <a href="https://www.kaggle.com/datasets/ajaypalsinghlo/world-happiness-report-2023">kaggle 2023</a>.
+      </div>
+    </div>
+
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div id="chart" style="margin-top: 1%;"></div>
+        <div id="chart-text"></div>
+        <div id="detail"></div>
+      </div>
+      <div class="slidecontainer">
+        <span class="slider-title">Year</span>
+        <input type="range" min="2015" max="2023" value="2023" class="slider" id="myRange" step="1">
+        <div id="range-text">2023</div>
+      </div>
+    </div>
+    <br>
+
+    <a class="prev" onclick="prevSlide()">&#10094;</a>
+    <a class="next" onclick="nextSlide()">&#10095;</a>
+    <footer>
+      <span id="orientationText" class="orientations">
+        Use the <b><a href="#" onmouseover="highlightArrows(1)" onmouseleave="highlightArrows(0)" class="tipLink">NEXT BUTTON</a></b> or <img class="keyboardIconSize" src="https://frbrigagao.github.io/cs416-narrative-visualization/images/keyboard_key_left.png"><img class="keyboardIconSize" src="https://frbrigagao.github.io/cs416-narrative-visualization/images/keyboard_key_right.png"> keys to navigate.
+    Hover over data points to view information.</span>
+  </footer>		
+  </main>	
+  	
+</body>
+
+  <script src="https://d3js.org/d3.v7.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+  <script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  
+  <script>
+    document.addEventListener(
+      "keydown",
+      (event) => {
+        if (event.code == "ArrowLeft") {
+          prevSlide();
+        }
+        if (event.code == "ArrowRight") {
+          nextSlide();
+        }
+      },
+      false
+    );
+
+  </script>
+
+</html>
