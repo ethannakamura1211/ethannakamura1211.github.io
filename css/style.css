@@ -1,0 +1,272 @@
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    margin-left: 20%;
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .slider-title{
+    margin: 0 auto;
+    width: 100px;
+    margin-left: 2%;
+    position: relative;
+    text-anchor: middle;
+    font-size: 12px;
+  }
+  
+  #range-text {
+    margin: 0 auto;
+    font-size: 12px;
+    margin-left: 45%;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  #chart-text {
+    color: black;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: -100px;
+    margin-top: 100px;
+    margin-left: 13%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  #detail {
+    position: fixed;
+    width: 300px;
+    height: 200px;
+    left: 7%;
+    top: 30%;
+  }
+
+  .slidecontainer {
+    width: 30%; /* Width of the outside container */
+    position: absolute;
+    top: 95%;
+    right: 30%;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;  
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%; 
+    background: #3F51B5;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #3F51B5;
+    cursor: pointer;
+  }
+
+/* fdf */
+
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  
+  .tipLink {
+    text-decoration: none;
+    cursor: pointer;
+    color: #3F51B5;
+    padding: 3px;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .tip {
+    border-width: 10px;
+    border-color: #3F51B5;
+    border-style: solid;
+    animation: pulsating 3s;
+    animation-iteration-count: infinite;
+  }
+  
+  #buttonNext {
+    background-color: red;
+  }
+  
+  li {
+    display: inline-block;
+  }
+  
+  /* Pagination links */
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a.active {
+    background-color: #04aa6d;
+    color: white;
+    font-weight: bold;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #3F51B5;
+  }
+  
+  .keyboardIconSize{
+    width: 35px;
+    height: auto;
+  }
+  
+  .videoTipSize{
+    height: 80px;
+    width: 140px;
+  }
+  
+  .mainTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .orientations {
+    text-align: center;
+    font-size: 1rem;
+    padding: 5px;
+  }
+  
+  .graphOrientations {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 5px;
+  }
+  
+  html,
+  body {
+    margin: 0;
+    height: 100%;
+    min-height: 100%;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  
+  p {
+    font-size: 2rem;
+    padding: 1rem;
+    max-width: 40rem;
+    margin: 2rem auto 4rem auto;
+  }
+  
+  header {
+    width: 100%;
+    align-self: center;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    top: 0;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    display: flex;
+    background-color: lightgray;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .orientations {
+    text-align: center;
+    font-size: 10px;
+  }
+
+  .keyboardIconSize{
+    width: 15px;
+    height: auto;
+  }
