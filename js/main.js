@@ -198,7 +198,7 @@ let AN = [
     [
         {
             note: {
-              label: "Many countries with high Dystopia scores are also poorly ranked like Liberia",
+              label: "Many countries with high Dystopia scores are also poorly ranked",
             },
             type: d3.annotationCalloutRect,
             subject: {
