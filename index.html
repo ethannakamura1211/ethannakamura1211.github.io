@@ -8,7 +8,7 @@
   <script type="text/javascript" src="js/countrys_flags.js"></script>
 </head>
 
-<body>		
+<body onload="zoom()">		
   <main>
     <div class="header"></div>
       <header>
@@ -83,6 +83,10 @@
       },
       false
     );
+
+    function zoom() {
+            document.body.style.zoom = "90%" 
+        }
 
   </script>
 
