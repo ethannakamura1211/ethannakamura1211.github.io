@@ -219,7 +219,7 @@ function process(happinessdata, metric, year) {
     "#d9d9d9", "#bc80bd", "#ccebc5", "#ffed6f", "#8dd3c7", "#ffffb3", "#bebada", "#fb8072"];
     var margin = {top: 100, right: 150, bottom: 60, left: 150},
     width = 1200 - margin.left - margin.right,
-    height = 580 - margin.top - margin.bottom;
+    height = 650 - margin.top - margin.bottom;
     var m = metric + "-" + year;
     // var xdomain = 7.5;
     var xdomain =  d3.max(happinessdata, d => +d[metric+"-"+year]);
